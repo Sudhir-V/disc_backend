@@ -83,9 +83,9 @@ exports.exportToXLSX = async (req, res) => {
                 'C Score': assessment ? assessment.score.C : '-',
                 'Highest Trait': assessment ? assessment.highestTrait : '-',
                 'Time Taken': assessment && assessment.timeTaken ? `${Math.floor(assessment.timeTaken / 60)}:${(assessment.timeTaken % 60).toString().padStart(2, '0')}` : '-',
-                'Completed Date': assessment ? new Date(assessment.createdAt).toLocaleDateString('en-IN') : '-',
-                'Completed Time': assessment ? new Date(assessment.createdAt).toLocaleTimeString('en-IN') : '-',
-                'User Registered': new Date(user.createdAt).toLocaleDateString('en-IN')
+                'Completed Date': assessment ? new Date(assessment.createdAt).toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' }) : '-',
+                'Completed Time': assessment ? new Date(assessment.createdAt).toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' }) : '-',
+                'User Registered': new Date(user.createdAt).toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' })
             };
         });
 
@@ -158,7 +158,7 @@ exports.exportToPDF = async (req, res) => {
         // Add title
         doc.fontSize(20).text('DISC Assessment User Reports', { align: 'center' });
         doc.moveDown();
-        doc.fontSize(10).text(`Generated on: ${new Date().toLocaleString('en-IN')}`, { align: 'center' });
+        doc.fontSize(10).text(`Generated on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`, { align: 'center' });
         doc.moveDown(2);
 
         // Table headers
@@ -210,7 +210,7 @@ exports.exportToPDF = async (req, res) => {
                 { width: 40 }
             );
             doc.text(
-                assessment ? new Date(assessment.createdAt).toLocaleDateString('en-IN') : '-',
+                assessment ? new Date(assessment.createdAt).toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' }) : '-',
                 640,
                 currentY,
                 { width: 80 }
