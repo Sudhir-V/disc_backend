@@ -5,18 +5,7 @@ const connectDB = require('./config/db');
 const path = require('path');
 const dotenv = require('dotenv');
 
-// Load .env files with precedence: .env.local > .env.${NODE_ENV} > .env
-// We load specific ones first because dotenv won't override existing keys.
-
-// 1. Load .env.local (Machine specific overrides)
-dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
-
-// 2. Load .env.${NODE_ENV} (Environment specific: development, production, test)
-if (process.env.NODE_ENV) {
-  dotenv.config({ path: path.resolve(process.cwd(), `.env.${process.env.NODE_ENV}`) });
-}
-
-// 3. Load .env (Defaults)
+// Load .env file
 dotenv.config();
 
 const app = express();
