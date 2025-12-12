@@ -18,4 +18,14 @@ router.get('/users/export/xlsx', isAdmin, adminController.exportToXLSX);
 // @access  Admin only
 router.get('/users/export/pdf', isAdmin, adminController.exportToPDF);
 
+// @route   POST /admin/settings/toggle-results
+// @desc    Toggle results visibility
+// @access  Admin only
+router.post('/settings/toggle-results', isAdmin, adminController.toggleResults);
+
+// @route   GET /admin/settings/results-status
+// @desc    Get results visibility status
+// @access  Public (or protected, but frontend needs it)
+router.get('/settings/results-status', adminController.getResultVisibility);
+
 module.exports = router;

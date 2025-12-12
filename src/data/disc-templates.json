@@ -1,0 +1,662 @@
+{
+    "D": {
+        "behavioralOverview": "Your profile suggests a natural inclination toward decisive action, direct communication, and forward movement. You tend to approach tasks with clarity and focus, often stepping into situations where structure or direction is needed. You are comfortable taking initiative and navigating challenges with confidence.",
+        "coreStrengths": [
+            {
+                "title": "Leadership Through Action",
+                "desc": "You often bring momentum to projects by moving ideas toward execution."
+            },
+            {
+                "title": "Confidence in Decision-Making",
+                "desc": "You demonstrate clarity and assurance when choosing pathways or solving problems."
+            },
+            {
+                "title": "Focus on Outcomes",
+                "desc": "You maintain attention on results, helping teams progress efficiently."
+            },
+            {
+                "title": "Ability to Navigate Pressure",
+                "desc": "You tend to stay composed and purposeful during demanding or time-sensitive situations."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Direct and Clear Messaging",
+                "desc": "You prefer straightforward communication that reduces ambiguity."
+            },
+            {
+                "title": "Solution-Focused Conversations",
+                "desc": "You naturally guide discussions toward outcomes and next steps."
+            },
+            {
+                "title": "Confidence in Expression",
+                "desc": "Your assertive tone often helps teams align quickly around priorities."
+            }
+        ],
+        "developmentOpportunities": [
+            "Broadening Collaborative Input: Involving others earlier in the process may enhance team ownership and strengthen shared outcomes.",
+            "Pacing for Strategic Depth: Slowing the pace when necessary can support long-term stability and alignment.",
+            "Strengthening Listening Presence: Allowing additional space for others’ perspectives may deepen collaboration and trust.",
+            "Balancing Detail with Direction: Considering both high-level outcomes and operational context can elevate decision quality."
+        ],
+        "workplacePreferences": [
+            "Autonomy and Clarity: You tend to work best when expectations are defined and you have room to act independently.",
+            "Fast-Moving Environments: Settings that encourage innovation, action, and measurable results align well with your approach."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Driving Momentum",
+            "description": "You often help teams move from planning to implementation with focus and urgency. Your directness and decisiveness support teams during complex or unclear situations."
+        },
+        "careerAlignment": "Roles Requiring Direction & Action\nYour profile aligns well with positions involving leadership, project oversight, or strategy execution.",
+        "adaptabilityInsight": "You may find it beneficial to adjust your communication pace or decision-making style based on the needs of different individuals. Flexing your approach in certain situations can help strengthen relationships and enhance overall influence.",
+        "summaryProfile": "D → Leadership + Decision-Making\nDrives direction, takes initiative, and makes confident choices to achieve outcomes."
+    },
+    "I": {
+        "behavioralOverview": "Your profile indicates a natural drive toward connection, expression, and optimism. You approach work with enthusiasm and a people-first mindset, often serving as a catalyst for team energy and morale. You thrive in environments where you can influence others and foster strong relationships.",
+        "coreStrengths": [
+            {
+                "title": "Influential Communication",
+                "desc": "You naturally persuade and motivate others through articulating a compelling vision."
+            },
+            {
+                "title": "Optimism and Energy",
+                "desc": "You bring a positive outlook that often lifts team morale during challenges."
+            },
+            {
+                "title": "Relationship Building",
+                "desc": "You excel at creating networks and fostering interpersonal connections."
+            },
+            {
+                "title": "Creative Expression",
+                "desc": "You often approach problems with innovative and out-of-the-box thinking."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Expressive and Engaging",
+                "desc": "You communicate with emotion and energy, capturing attention easily."
+            },
+            {
+                "title": "Persuasive Narrative",
+                "desc": "You frame ideas in a way that resonates with others' values and aspirations."
+            },
+            {
+                "title": "Open and Approachable",
+                "desc": "Your style invites dialogue and encourages others to share their thoughts."
+            }
+        ],
+        "developmentOpportunities": [
+            "Focusing on Follow-Through: Ensuring detailed execution matches the initial excitement of new ideas.",
+            "Balancing Talk with Listening: Pausing to ensure all technical details and concerns are fully understood.",
+            "Objectivity in Analysis: Balancing emotional intuition with data-driven evaluation.",
+            "Managing Over-Commitment: Learning to prioritize effectively to avoid spreading energy too thin."
+        ],
+        "workplacePreferences": [
+            "Collaborative and Social: You thrive in environments that allow for interaction and teamwork.",
+            "Dynamic and Varied: Settings that offer variety and freedom from rigid routine appeal to you."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Fostering Connection",
+            "description": "You often act as the glue in a team, ensuring everyone feels included and motivated. Your ability to read the room helps in navigating team dynamics."
+        },
+        "careerAlignment": "Roles Requiring Influence & Interaction\nYour profile aligns well with positions in sales, public relations, team building, or creative leadership.",
+        "adaptabilityInsight": "You may benefit from adopting a more structured approach when dealing with highly analytical tasks. Flexing towards detail-orientation can enhance your effectiveness in execution phases.",
+        "summaryProfile": "I → Communication + Influence\nEngages people through expression, motivation, and positive interpersonal connection."
+    },
+    "S": {
+        "behavioralOverview": "Your profile reflects a preference for stability, harmony, and consistent support. You are often the anchor in a team, providing reliable execution and a calm presence. You value cooperation and prefer steady, predictable environments where you can contribute meaningfully over time.",
+        "coreStrengths": [
+            {
+                "title": "Consistent Reliability",
+                "desc": "You can be counted on to follow through on commitments and maintain standards."
+            },
+            {
+                "title": "Supportive Collaboration",
+                "desc": "You naturally look out for others and prioritize team cohesion."
+            },
+            {
+                "title": "Patience and Composure",
+                "desc": "You remain calm under pressure, providing a stabilizing influence."
+            },
+            {
+                "title": "Good Listening",
+                "desc": "You give clear attention to others, making them feel heard and understood."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Patient and Considerate",
+                "desc": "You communicate in a way that is respectful and non-threatening."
+            },
+            {
+                "title": "Listening-First",
+                "desc": "You often process information thoroughly before responding."
+            },
+            {
+                "title": "Reassuring Tone",
+                "desc": "Your communication style fosters a sense of safety and trust."
+            }
+        ],
+        "developmentOpportunities": [
+            "Embracing Change: Viewing change as an opportunity rather than a disruption.",
+            "Asserting Needs: improving ability to voice personal requirements or improved boundaries.",
+            "Decisiveness Speed: Accelerating decision-making in ambiguous or fast-paced situations.",
+            "Accepting Constructive Conflict: Understanding that healthy debate can lead to better outcomes."
+        ],
+        "workplacePreferences": [
+            "Stable and Structured: You perform best in environments with clear processes and minimal chaos.",
+            "Team-Oriented: Settings that emphasize cooperation over competition align well with your nature."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Creating Harmony",
+            "description": "You are excellent at mediating subtle tensions and ensuring the team runs smoothly. You prioritize the group's well-being above individual recognition."
+        },
+        "careerAlignment": "Roles Requiring Consistency & Support\nYour profile aligns well with positions in client service, administration, healthcare, or human resources.",
+        "adaptabilityInsight": "You may find it empowering to speak up earlier in discussions. Flexing towards more assertiveness can help ensure your valuable insights effectively shape decisions.",
+        "summaryProfile": "S → Stability + Supportive Collaboration\nCreates trust, consistency, and a supportive environment that strengthens team harmony."
+    },
+    "C": {
+        "behavioralOverview": "Your profile suggests a focus on accuracy, quality, and analytical rigor. You approach work with a systematic mindset, ensuring that details are correct and standards are met. You value logic and objectivity, often serving as the quality controller in any initiative.",
+        "coreStrengths": [
+            {
+                "title": "Analytical Precision",
+                "desc": "You have a natural ability to dissect complex problems and find logical solutions."
+            },
+            {
+                "title": "Focus on Quality",
+                "desc": "You hold high standards and ensure work is done correctly."
+            },
+            {
+                "title": "Systematic Planning",
+                "desc": "You excel at organizing tasks and creating efficient processes."
+            },
+            {
+                "title": "Objectivity",
+                "desc": "You make decisions based on facts and data rather than emotion."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Precise and Factual",
+                "desc": "You prefer communication that is specific, accurate, and detail-oriented."
+            },
+            {
+                "title": "Questioning for Clarity",
+                "desc": "You ask probing questions to ensure full understanding of requirements."
+            },
+            {
+                "title": "Written Documentation",
+                "desc": "You often prefer written communication to ensure an accurate record of agreements."
+            }
+        ],
+        "developmentOpportunities": [
+            "Avoiding Analysis Paralysis: Moving forward even when all variables aren't perfectly known.",
+            "Balancing Criticism: Ensuring feedback is delivered with encouragement, not just correction.",
+            "Flexibility: adapting more readily when processes must change quickly.",
+            "Collaborating Before Perfection: Sharing work in progress to get early feedback rather than waiting for completion."
+        ],
+        "workplacePreferences": [
+            "Defined Standards: You thrive where rules and expectations are clear and respected.",
+            "Quiet Focus: Environments that allow for deep concentration and minimal interruption."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Ensuring Quality",
+            "description": "You provide the scrutiny needed to prevent errors and ensure high-quality outcomes. You help the team stay realistic and grounded."
+        },
+        "careerAlignment": "Roles Requiring Analysis & Precision\nYour profile aligns well with positions in engineering, finance, data analysis, or compliance.",
+        "adaptabilityInsight": "You may benefit from focusing less on the 'how' and more on the 'who'. Flexing towards more relational connection can improve team buy-in for your processes.",
+        "summaryProfile": "C → Quality + Analytical Thinking\nEnsures accuracy, structure, and logical reasoning for high-quality outcomes."
+    },
+    "DI": {
+        "behavioralOverview": "Your profile combines decisive leadership with persuasive influence. You are a 'Change Agent' who not only drives results but also rallies others to the cause. You are energetic, assertive, and skilled at moving both projects and people forward.",
+        "coreStrengths": [
+            {
+                "title": "Visionary Leadership",
+                "desc": "You can see the big picture and motivate others to achieve it."
+            },
+            {
+                "title": "Persuasive Action",
+                "desc": "You combine the drive to act with the ability to sell your ideas."
+            },
+            {
+                "title": "High Energy",
+                "desc": "You bring a dynamic presence that accelerates team progress."
+            },
+            {
+                "title": "Initiative",
+                "desc": "You are quick to start new ventures and confident in leading them."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Inspirational and Direct",
+                "desc": "You command attention with a style that is both assertive and engaging."
+            },
+            {
+                "title": "Future-Oriented",
+                "desc": "You talk about possibilities and next steps with enthusiasm."
+            },
+            {
+                "title": "Fast-Paced",
+                "desc": "You prefer quick exchanges that keep momentum going."
+            }
+        ],
+        "developmentOpportunities": [
+            "Patience with Detail: Slowing down to ensure operational realities match not just the vision.",
+            "Listening Skills: Ensuring you don't over-talk or steamroll quieter team members.",
+            "Consistent Follow-Through: Staying engaged with projects after the initial excitement phase.",
+            "Humility: recognizing that not every idea needs to be acted upon immediately."
+        ],
+        "workplacePreferences": [
+            "Freedom to Lead: You need autonomy and the ability to influence direction.",
+            "Dynamic Interaction: Environments with high interaction and fast-paced challenges."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Mobilizing the Team",
+            "description": "You are the spark plug. You get things moving and keep spirits high, though you may need support on the details."
+        },
+        "careerAlignment": "Roles: Entrepreneurship, Sales Management, Executive Leadership.",
+        "adaptabilityInsight": "Balancing your drive with patience for process will make you even more effective. Ensure you validate the details before sprinting ahead.",
+        "summaryProfile": "DI → Leadership + Influence\nDecisive leadership strengthened by persuasive communication and people engagement."
+    },
+    "ID": {
+        "behavioralOverview": "Your profile suggests a focus on communication backed by a drive for execution. You are a 'Persuader' who uses charisma and assertiveness to get things done. You are less about command-and-control and more about convincing-and-doing.",
+        "coreStrengths": [
+            {
+                "title": "Charismatic Execution",
+                "desc": "You get results by getting people on board first."
+            },
+            {
+                "title": "Bold Communication",
+                "desc": "You are not afraid to speak up and advocate for your ideas."
+            },
+            {
+                "title": "Optimistic Drive",
+                "desc": "You tackle challenges with a belief that they can be overcome."
+            },
+            {
+                "title": "Social Confidence",
+                "desc": "You navigate social and professional hierarchies with ease."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Engaging and Assertive",
+                "desc": "You are friendly but firm about your goals."
+            },
+            {
+                "title": "Storytelling",
+                "desc": "You use narrative to make your points compelling."
+            },
+            {
+                "title": "Open",
+                "desc": "You share your thoughts freely and expect others to do the same."
+            }
+        ],
+        "developmentOpportunities": [
+            "Detail Orientation: Remembering that the 'boring' details are crucial for success.",
+            "Active Listening: curbing the urge to interrupt with your own ideas.",
+            "Realistic Planning: Tempering optimism with a hard look at resources and timelines.",
+            "Consistency: Ensuring that your actions match your words over the long term."
+        ],
+        "workplacePreferences": [
+            "Socially Active: Workplaces where interaction is frequent.",
+            "Results-Oriented but Flexible: You want goals but freedom in how to reach them."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Inspiring Action",
+            "description": "You lead through inspiration. You make the work feel exciting and worthwhile."
+        },
+        "careerAlignment": "Roles: Marketing Directing, Public Speaking, Business Development.",
+        "adaptabilityInsight": "Developing a habit of pausing to check facts will ground your enthusiasm and build greater trust with analytical colleagues.",
+        "summaryProfile": "ID → Communication + Execution\nExpressive, motivating communication backed by action-oriented implementation."
+    },
+    "DC": {
+        "behavioralOverview": "Your profile combines dominance with conscientiousness, creating a 'Creative' but structured leader. You are results-oriented but demand high standards and accuracy. You are a strategic thinker who execute with precision.",
+        "coreStrengths": [
+            {
+                "title": "Strategic Execution",
+                "desc": "You plan your attack carefully and then execute swiftly."
+            },
+            {
+                "title": "High Standards",
+                "desc": "You drive for results that are not just fast, but correct."
+            },
+            {
+                "title": "Objective Decision Making",
+                "desc": "You balance drive with data."
+            },
+            {
+                "title": "Problem Solving",
+                "desc": "You attack complex problems with logic and determination."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Direct and Factual",
+                "desc": "You state what needs to be done and why, backed by logic."
+            },
+            {
+                "title": "No-Nonsense",
+                "desc": "You have little patience for fuzziness or emotional appeals."
+            },
+            {
+                "title": "Questioning",
+                "desc": "You challenge assumptions to ensure durability."
+            }
+        ],
+        "developmentOpportunities": [
+            "Warmth: Learning to express appreciation and build rapport, not just exchange information.",
+            "Flexibility: Accepting that sometimes 'good enough' is necessary for speed.",
+            "Delegation: Trusting others to do the work without micromanaging quality.",
+            "Patience: Understanding that others may need more time to process or act."
+        ],
+        "workplacePreferences": [
+            "Structured Achievement: You want clear goals and the resources to achieve them perfectly.",
+            "Efficiency: You dislike wasted time and inefficient meetings."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Defining the Path",
+            "description": "You set the bar high and keep the team focused on the critical path."
+        },
+        "careerAlignment": "Roles: Operations Management, Architecture, Strategy Consulting.",
+        "adaptabilityInsight": "Adding a personal touch to your leadership can prevent you from seeming cold. Remember that team morale is a functional asset.",
+        "summaryProfile": "DC → Strategy + Analytical Leadership\nStrategic, big-picture thinking combined with data-driven, logical leadership."
+    },
+    "CD": {
+        "behavioralOverview": "Your profile is that of a 'Cautious Enforcer'. You are detail-oriented and systematic, but you have a strong drive to ensure these systems are implemented correctly. You use your authority to uphold standards.",
+        "coreStrengths": [
+            {
+                "title": "Rigorous Implementation",
+                "desc": "You ensure that rules and best practices are followed."
+            },
+            {
+                "title": "Critical Analysis",
+                "desc": "You spot flaws in a plan before they become disasters."
+            },
+            {
+                "title": "Structured Decision Making",
+                "desc": "You make decisions carefully and stick to them."
+            },
+            {
+                "title": "Quality Control",
+                "desc": "You effectively champion high standards."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Formal and Specific",
+                "desc": "You choose your words carefully to be precise."
+            },
+            {
+                "title": "Evaluative",
+                "desc": "You often focus on what can be improved or what is wrong."
+            },
+            {
+                "title": "Written/Documented",
+                "desc": "You prefer trails of decisions."
+            }
+        ],
+        "developmentOpportunities": [
+            "Tone / Tact: delivering criticism in a way that doesn't discourage others.",
+            "Speed of Action: moving faster even if a full analysis isn't complete.",
+            "Openness to Innovation: Being willing to try unproven methods.",
+            "Relationship Focus: Spending time on the 'soft stuff' to build alliance."
+        ],
+        "workplacePreferences": [
+            "Organized and Professional: You prefer a disciplined environment.",
+            "Quality-First: Cultures that prioritize doing it right over doing it fast."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Guardian of Standards",
+            "description": "You protect the team from making sloppy mistakes. You provide the necessary skepticism."
+        },
+        "careerAlignment": "Roles: Financial Controller, Quality Assurance Lead, Systems Administrator.",
+        "adaptabilityInsight": "Checking in on the emotional state of your team can help your rigorous standards be accepted rather than resisted.",
+        "summaryProfile": "CD → Precision + Decision-Making\nStructured, detail-focused evaluation leading to effective and confident decisions."
+    },
+    "IS": {
+        "behavioralOverview": "Your profile is that of a 'Harmonizer' or 'Counselor'. You combine the sociability of Influence with the empathy of Steadiness. You are warm, approachable, and highly relational, prioritizing people above tasks.",
+        "coreStrengths": [
+            {
+                "title": "Empathy",
+                "desc": "You deeply understand and care about how others feel."
+            },
+            {
+                "title": "Team Cohesion",
+                "desc": "You naturally build bridges between people."
+            },
+            {
+                "title": "Communication",
+                "desc": "You are a friendly and listening communicator."
+            },
+            {
+                "title": "Service Orientation",
+                "desc": "You are motivated to help others succeed."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Warm and Invitating",
+                "desc": "You make others feel comfortable instantly."
+            },
+            {
+                "title": "Personal",
+                "desc": "You connect on a human level, not just professional."
+            },
+            {
+                "title": "Supportive",
+                "desc": "You offer encouragement and validation."
+            }
+        ],
+        "developmentOpportunities": [
+            "Assertiveness: Standing your ground when conflict arises.",
+            "Objective Feedback: Delivering bad news without sugarcoating it too much.",
+            "Focus on Task: ensuring socializing doesn't derail productivity.",
+            "Speed of Change: adjusting more quickly to disruptions in the team dynamic."
+        ],
+        "workplacePreferences": [
+            "Friendly and Collaborative: A 'family' atmosphere at work.",
+            "Low Conflict: Environments where people get along."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Building Trust",
+            "description": "You create psychological safety in the team, allowing others to take risks."
+        },
+        "careerAlignment": "Roles: Human Resources, Teaching/Training, Customer Success.",
+        "adaptabilityInsight": "Learning to separate the person from the problem will help you address performance issues without feeling like you're damaging the relationship.",
+        "summaryProfile": "IS → Communication + Emotional Intelligence\nWarm, empathetic communication enabling deep interpersonal trust and connection."
+    },
+    "SI": {
+        "behavioralOverview": "Your profile suggests a 'Supporter' style. You are reliable and steady (S), but also friendly and people-oriented (I). You are a team player who is consistent, loyal, and good at maintaining relationships over the long term.",
+        "coreStrengths": [
+            {
+                "title": "Loyalty",
+                "desc": "You are dedicated to your team and organization."
+            },
+            {
+                "title": "Consistent Support",
+                "desc": "You provide steady help that others rely on."
+            },
+            {
+                "title": "Listening",
+                "desc": "You define what it means to be a good listener."
+            },
+            {
+                "title": "Mediating",
+                "desc": "You help defuse tension with your calm demeanor."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Gentle and Considerate",
+                "desc": "You are careful not to offend."
+            },
+            {
+                "title": "Collaborative",
+                "desc": "You use 'we' language effectively."
+            },
+            {
+                "title": "Steady",
+                "desc": "You communicate consistently, avoiding dramatic highs and lows."
+            }
+        ],
+        "developmentOpportunities": [
+            "Taking Initiative: Step up to lead without being asked.",
+            "Directness: sometimes being too indirect causes confusion.",
+            "Multitasking: You prefer focusing on one thing/person at a time.",
+            "Self-Promotion: ensure your contributions are recognized."
+        ],
+        "workplacePreferences": [
+            "Stable and Friendly: You want security and nice colleagues.",
+            "Predictable: You like knowing what is expected."
+        ],
+        "teamCollaborationStyle": {
+            "title": "The Reliable Teammate",
+            "description": "You are often the favorite teammate because you are helpful, low-ego, and kind."
+        },
+        "careerAlignment": "Roles: Administrative Support, Nursing/Care, Account Management.",
+        "adaptabilityInsight": "Pushing yourself to voice your opinion even when it differs from the group will increase your value as a strategic contributor.",
+        "summaryProfile": "SI → Stability + Team Collaboration\nA calm, reliable presence that nurtures cohesive, collaborative team environments."
+    },
+    "SC": {
+        "behavioralOverview": "Your profile combines Steadiness and Conscientiousness, making you a 'Coordinator' or 'Specialist'. You are quiet, reliable, accurate, and persistent. You serve the team by creating and maintaining reliable systems.",
+        "coreStrengths": [
+            {
+                "title": "Accuracy and Reliability",
+                "desc": "You not only get it right, you do it consistently."
+            },
+            {
+                "title": "Process adherence",
+                "desc": "You follow procedures faithfully."
+            },
+            {
+                "title": "Calm Analysis",
+                "desc": "You look at data without getting emotional."
+            },
+            {
+                "title": "Deep Focus",
+                "desc": "You can work on complex details for long periods."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Careful and Thoughtful",
+                "desc": "You speak when you have something correct to say."
+            },
+            {
+                "title": "Detailed",
+                "desc": "You provide all the necessary context."
+            },
+            {
+                "title": "Reserved",
+                "desc": "You are not the loudest voice, but often the most accurate."
+            }
+        ],
+        "developmentOpportunities": [
+            "Adaptability: Moving faster when the plan changes.",
+            "Expressiveness: Showing enthusiasm so others know you are on board.",
+            "Assertiveness: Sharing your expertise before it is asked for.",
+            "Handling Chaos: Developing strategies for when things go off-script."
+        ],
+        "workplacePreferences": [
+            "Quiet and Organized: You need a space free from distraction.",
+            "Clear Procedure: You dislike ambiguity in instructions."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Stabilizing Processes",
+            "description": "You build the foundation the team rests on. You ensure nothing falls through the cracks."
+        },
+        "careerAlignment": "Roles: Research, Technical Writing, Database Management.",
+        "adaptabilityInsight": "Learning to act with 80% certainty rather than 100% will help you keep pace with faster-moving team members.",
+        "summaryProfile": "SC → Process Mastery + Agility\nOperational structure balanced with adaptable, steady problem-solving."
+    },
+    "CS": {
+        "behavioralOverview": "Your profile is that of a 'Precisionist'. You lead with Conscientiousness (C) and support it with Steadiness (S). You are thorough, careful, and committed to high quality. You prefer to work behind the scenes to ensure perfection.",
+        "coreStrengths": [
+            {
+                "title": "Detailed Analysis",
+                "desc": "Nothing escapes your notice."
+            },
+            {
+                "title": "Systems Thinking",
+                "desc": "You understand how parts fit into the whole."
+            },
+            {
+                "title": "Cautious Planning",
+                "desc": "You anticipate risks effectively."
+            },
+            {
+                "title": "Diplomacy",
+                "desc": "You are polite and adhere to protocol."
+            }
+        ],
+        "communicationApproach": [
+            {
+                "title": "Structured",
+                "desc": "You present information in a logical order."
+            },
+            {
+                "title": "Validation-Seeking",
+                "desc": "You verify facts before stating them."
+            },
+            {
+                "title": "Written",
+                "desc": "You like email or reports to ensure clarity."
+            }
+        ],
+        "developmentOpportunities": [
+            "Decisiveness: trusting your gut when data is incomplete.",
+            "Conflict Avoidance: Dealing with interpersonal issues directly.",
+            "Speed: You can be slow because you are being so careful.",
+            "Flexibility: You may struggle if the rules change constantly."
+        ],
+        "workplacePreferences": [
+            "Expertise-Driven: Environments that value depth of knowledge.",
+            "Structured: You want a clear job description."
+        ],
+        "teamCollaborationStyle": {
+            "title": "Quality Assurance",
+            "description": "You are the one who double-checks the work. You provide the safety net of accuracy."
+        },
+        "careerAlignment": "Roles: Accounting, Software Engineering, Scientific Research.",
+        "adaptabilityInsight": "Allowing for 'messy' brainstorming sessions without correcting errors immediately will encourage innovation in your team.",
+        "summaryProfile": "CS → Quality + Innovation\nHigh-quality standards combined with thoughtful improvements and structured creativity."
+    },
+    "traits": {
+        "D": {
+            "name": "Dominance",
+            "color": "#dc2626",
+            "desc": "Direct, firm, and results-oriented."
+        },
+        "I": {
+            "name": "Influence",
+            "color": "#eab308",
+            "desc": "Outgoing, enthusiastic, and optimistic."
+        },
+        "S": {
+            "name": "Steadiness",
+            "color": "#86efac",
+            "desc": "Even-tempered, accommodating, and patient."
+        },
+        "C": {
+            "name": "Conscientiousness",
+            "color": "#2563eb",
+            "desc": "Analytical, reserved, and precise."
+        }
+    },
+    "tagline": {
+        "D": "The Commander",
+        "I": "The Influencer",
+        "S": "The Supporter",
+        "C": "The Analyst",
+        "DI": "The Driver",
+        "ID": "The Promoter",
+        "DC": "The Architect",
+        "CD": "The Critic",
+        "IS": "The Harmonizer",
+        "SI": "The Relator",
+        "SC": "The Technician",
+        "CS": "The Practitioner"
+    }
+}

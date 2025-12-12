@@ -62,15 +62,17 @@ exports.submitAssessment = async (req, res) => {
 
         const { timeTaken } = req.body; // Expecting time in seconds
 
+
         // Calculate Scores
         let scores = { D: 0, I: 0, S: 0, C: 0 };
+        const TOTAL_QUESTIONS = 40; // Assuming 40 questions
 
         answers.forEach((ans) => {
-            // Add point for Most Like Me
+            // Add point for Most Like Me (+1)
             if (ans.most && scores[ans.most] !== undefined) {
                 scores[ans.most]++;
             }
-            // Subtract point for Least Like Me
+            // Subtract point for Least Like Me (-1)
             if (ans.least && scores[ans.least] !== undefined) {
                 scores[ans.least]--;
             }
@@ -78,10 +80,55 @@ exports.submitAssessment = async (req, res) => {
 
         console.log('Calculated Scores:', scores);
 
-        // Determine Highest Trait
-        // This might need refinement if scores are tied or negative, but standard logic applies: max value.
-        let highestTrait = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
-        console.log('Highest Trait:', highestTrait);
+        // --- Calculate Percentages ---
+        // Max possible score for a trait is +40 (selected as Most for all 40 questions) - Though practically impossible to be +40 if other traits exist.
+        // Min possible score is -40.
+        // Range is 80 (-40 to +40).
+        // Percentage = ((Score + 40) / 80) * 100? 
+        // OR simple proportion of total questions? 
+        // User Requirement: "The ouput in results D,I,S,C need to show percentage instead of showing scores."
+        // Let's use a mapping relative to the total number of questions to keep it intuitive.
+        // Actually, let's look at the range. 
+        // If I answer "Most D" 40 times, D=40. 
+        // Percentage = (Score / TotalQuestions) * 100? No, score can be negative.
+        // Let's treat valid range as -40 to +40. 
+        // Let's normalize to 0-100 scale: ((Score + TotalQuestions) / (2 * TotalQuestions)) * 100.
+        // Example: Score 0 => ((0+40)/80)*100 = 50%
+        // Score 40 => ((40+40)/80)*100 = 100%
+        // Score -40 => ((-40+40)/80)*100 = 0%
+
+        let percentages = {};
+        Object.keys(scores).forEach(trait => {
+            // ensure result is between 0 and 100
+            let p = Math.round(((scores[trait] + TOTAL_QUESTIONS) / (2 * TOTAL_QUESTIONS)) * 100);
+            percentages[trait] = Math.max(0, Math.min(100, p));
+        });
+
+
+        // --- Style Determination ---
+        // Sort traits by score (highest to lowest)
+        const sortedTraits = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+        const primaryTrait = sortedTraits[0][0];
+        const primaryScore = sortedTraits[0][1];
+        const secondaryTraitKey = sortedTraits[1][0];
+        const secondaryScore = sortedTraits[1][1];
+
+        let highestTrait = primaryTrait;
+        let secondaryTrait = null;
+
+        // Threshold logic: if highest score is at least 5 points higher than second, show only primary.
+        // Otherwise, show combination.
+        if ((primaryScore - secondaryScore) >= 5) {
+            highestTrait = primaryTrait;
+            secondaryTrait = null; // Single style
+        } else {
+            // Combination style
+            highestTrait = primaryTrait;
+            secondaryTrait = secondaryTraitKey;
+        }
+
+        console.log('Sorted Traits:', sortedTraits);
+        console.log('Primary:', highestTrait, 'Secondary:', secondaryTrait);
 
         // Find existing incomplete assessment or create new one
         let assessment = await Assessment.findOne({
@@ -94,7 +141,9 @@ exports.submitAssessment = async (req, res) => {
             // Update existing incomplete assessment
             assessment.answers = answers;
             assessment.score = scores;
+            assessment.percentages = percentages;
             assessment.highestTrait = highestTrait;
+            assessment.secondaryTrait = secondaryTrait;
             assessment.timeTaken = timeTaken;
             await assessment.save();
             console.log('Assessment updated successfully:', assessment._id);
@@ -105,7 +154,9 @@ exports.submitAssessment = async (req, res) => {
                 setId,
                 answers,
                 score: scores,
+                percentages,
                 highestTrait,
+                secondaryTrait,
                 timeTaken
             });
             console.log('Assessment created successfully:', assessment._id);
