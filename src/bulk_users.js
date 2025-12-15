@@ -20,7 +20,8 @@ connectDB();
 // ];
 
 const users = [
-    // { name: "Test User", email: "test@example.com", phone: "9999999999", gender: "Male" }
+    { name: "Suriya", email: "suriya@wele.in", phone: "9994594871", gender: "Male", isAdmin: true },
+    { name: "Praburaju S", email: "prabu@wele.in", phone: "9940255655", gender: "Male", isAdmin: true },
 ];
 
 // ==========================================================
