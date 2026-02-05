@@ -1,92 +1,72 @@
 const User = require('../models/User.model');
-const msg91Service = require('../services/msg91.service');
+const jwt = require('jsonwebtoken');
 
-// @desc    Send OTP
-// @route   POST /auth/send-otp
+// @desc    Login with email or phone number only
+// @route   POST /auth/login
 // @access  Public
-exports.sendOtp = async (req, res) => {
-    const { phone } = req.body;
+exports.login = async (req, res) => {
+    const { identifier } = req.body;
 
-    if (!phone) {
-        return res.status(400).json({ message: 'Please provide a phone number' });
+    if (!identifier) {
+        return res.status(400).json({ message: 'Please provide email or phone number' });
     }
 
-    // Check if user exists
-    const userExists = await User.findOne({ phone });
-    if (!userExists) {
-        return res.status(404).json({ message: 'User not found. Please contact administrator.' });
-    }
+    // Validate email format
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    // Validate phone format (Indian phone numbers: 10 digits starting with 6-9)
+    const validatePhone = (phone) => {
+        const cleanedPhone = phone.replace(/\D/g, '');
+        const indianPhoneRegex = /^[6-9]\d{9}$/;
+        return indianPhoneRegex.test(cleanedPhone);
+    };
 
     try {
-        const response = await msg91Service.sendOtp(phone);
+        // Check if identifier is email or phone
+        const isEmail = identifier.includes('@');
 
-        // Msg91 response usually contains type: "success" or "error"
-        if (response.type === 'success') {
-            res.status(200).json({ message: 'OTP sent successfully', details: response });
-        } else {
-            res.status(400).json({ message: 'Failed to send OTP', details: response });
-        }
-    } catch (error) {
-        res.status(500).json({ message: 'Server Error', error: error.message });
-    }
-};
-
-// @desc    Retry OTP
-// @route   POST /auth/retry-otp
-// @access  Public
-exports.retryOtp = async (req, res) => {
-    const { phone } = req.body;
-
-    if (!phone) {
-        return res.status(400).json({ message: 'Please provide a phone number' });
-    }
-
-    try {
-        const response = await msg91Service.retryOtp(phone);
-        if (response.type === 'success') {
-            res.status(200).json({ message: 'OTP resent successfully', details: response });
-        } else {
-            res.status(400).json({ message: 'Failed to resend OTP', details: response });
-        }
-    } catch (error) {
-        res.status(500).json({ message: 'Server Error', error: error.message });
-    }
-};
-
-// @desc    Verify OTP and Login
-// @route   POST /auth/verify-otp
-// @access  Public
-exports.verifyOtp = async (req, res) => {
-    const { phone, otp } = req.body;
-
-    if (!phone || !otp) {
-        return res.status(400).json({ message: 'Please provide phone and OTP' });
-    }
-
-    try {
-        const response = await msg91Service.verifyOtp(phone, otp);
-
-        if (response.type === 'success') {
-            // OTP Verified - Find User
-            const user = await User.findOne({ phone });
-
-            if (!user) {
-                return res.status(404).json({ message: 'User record not found.' });
+        // Validate format
+        if (isEmail) {
+            if (!validateEmail(identifier)) {
+                return res.status(400).json({ message: 'Invalid email format' });
             }
-
-            res.status(200).json({
-                message: 'Login successful',
-                user: {
-                    _id: user._id,
-                    phone: user.phone,
-                    name: user.name,
-                },
-            });
         } else {
-            res.status(400).json({ message: 'Invalid OTP', details: response });
+            if (!validatePhone(identifier)) {
+                return res.status(400).json({ message: 'Invalid phone number format. Please enter a valid 10-digit phone number.' });
+            }
         }
+
+        // Find user by email or phone
+        const user = await User.findOne(
+            isEmail ? { email: identifier } : { phone: identifier.replace(/\D/g, '') }
+        );
+
+        if (!user) {
+            return res.status(404).json({ message: 'You are not an authenticated user. Please contact your support team.' });
+        }
+
+        // Generate Token
+        const token = jwt.sign(
+            { id: user._id, isAdmin: user.isAdmin },
+            process.env.JWT_SECRET || 'fallback_secret_do_not_use_in_prod',
+            { expiresIn: '30d' }
+        );
+
+        res.status(200).json({
+            message: 'Login successful',
+            user: {
+                _id: user._id,
+                phone: user.phone,
+                email: user.email,
+                name: user.name,
+                isAdmin: user.isAdmin,
+            },
+            token
+        });
     } catch (error) {
-        // Axios error from Msg91 service (likely 4xx for invalid OTP)
-        res.status(401).json({ message: 'Verification failed', error: error.response?.data?.message || error.message });
+        res.status(500).json({ message: 'Server Error', error: error.message });
     }
 };

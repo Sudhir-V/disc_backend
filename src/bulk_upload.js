@@ -27,402 +27,402 @@ connectDB();
 const newQuestions = [
     {
         "qId": 1,
-        "question": "Your senior manager suddenly asks for urgent progress updates.",
+        "question": "When leadership introduces a strategic initiative that impacts several teams at once, you usually respond by:",
         "options": [
-            { "type": "C", "text": "I gather accurate details before updating." },
-            { "type": "D", "text": "I respond immediately with quick actions." },
-            { "type": "I", "text": "I keep the atmosphere positive while addressing the request." },
-            { "type": "S", "text": "I stay calm and proceed steadily under pressure." }
+            { "type": "I", "text": "Communicating purpose and intent clearly" },
+            { "type": "S", "text": "Supporting teams to adjust at a steady pace" },
+            { "type": "C", "text": "Assessing implications and risks carefully" },
+            { "type": "D", "text": "Driving initial actions to build momentum" }
         ]
     },
     {
         "qId": 2,
-        "question": "A project deadline is just hours away, and a lot of work remains.",
+        "question": "When an important decision must be made but opinions across the team differ strongly, you typically:",
         "options": [
-            { "type": "I", "text": "I motivate the team to keep the energy up." },
-            { "type": "C", "text": "I avoid mistakes by working carefully." },
-            { "type": "D", "text": "I speed up and push through aggressively." },
-            { "type": "S", "text": "I remain steady and focused on each task." }
+            { "type": "S", "text": "Maintain execution until consensus forms" },
+            { "type": "D", "text": "Decide and move forward to avoid delays" },
+            { "type": "C", "text": "Evaluate options using objective criteria" },
+            { "type": "I", "text": "Facilitate discussion to reach alignment" }
         ]
     },
     {
         "qId": 3,
-        "question": "You find a big error in the final stage of a project.",
+        "question": "When project timelines are extended due to external constraints, you tend to:",
         "options": [
-            { "type": "S", "text": "I calmly help the team correct it." },
-            { "type": "D", "text": "I take control and fix it as fast as possible." },
-            { "type": "C", "text": "I check the entire work to ensure no further errors." },
-            { "type": "I", "text": "I involve others to keep everyone confident." }
+            { "type": "I", "text": "Communicate updates and revised expectations" },
+            { "type": "C", "text": "Review impact on quality and outcomes" },
+            { "type": "S", "text": "Maintain consistent execution despite changes" },
+            { "type": "D", "text": "Re-plan activities to regain progress" }
         ]
     },
     {
         "qId": 4,
-        "question": "Your team is stressed due to heavy workload.",
+        "question": "When senior stakeholders expect high confidence in numbers and assumptions, you usually focus on:",
         "options": [
-            { "type": "D", "text": "I quickly reorganize tasks and push the team forward." },
-            { "type": "C", "text": "I reassess the plan to remove inefficiencies." },
-            { "type": "I", "text": "I uplift their mood and reduce stress through communication." },
-            { "type": "S", "text": "I calmly support everyone and maintain stability." }
+            { "type": "S", "text": "Ensuring information is presented steadily" },
+            { "type": "D", "text": "Delivering conclusions clearly" },
+            { "type": "I", "text": "Explaining context and rationale" },
+            { "type": "C", "text": "Verifying accuracy and data integrity" }
         ]
     },
     {
         "qId": 5,
-        "question": "A client requests a change moments before delivery.",
+        "question": "When a recurring issue begins to affect delivery predictability, you typically:",
         "options": [
-            { "type": "I", "text": "I talk positively with the client to manage expectations." },
-            { "type": "C", "text": "I check if the change is feasible without risks." },
-            { "type": "D", "text": "I decide whether to accept or reject the change quickly." },
-            { "type": "S", "text": "I adjust carefully without creating panic." }
+            { "type": "C", "text": "Investigate root causes thoroughly" },
+            { "type": "S", "text": "Reinforce stable processes and routines" },
+            { "type": "I", "text": "Discuss the issue openly to gain buy-in" },
+            { "type": "D", "text": "Take decisive action to eliminate it" }
         ]
     },
     {
         "qId": 6,
-        "question": "You have a meeting with multiple senior leaders who expect results.",
+        "question": "When responsibilities are redistributed across the team, you usually:",
         "options": [
-            { "type": "S", "text": "I speak calmly and respectfully." },
-            { "type": "C", "text": "I focus on data and accuracy." },
-            { "type": "D", "text": "I present confidently and take control." },
-            { "type": "I", "text": "I communicate clearly and maintain rapport." }
+            { "type": "I", "text": "Communicate changes clearly to everyone" },
+            { "type": "S", "text": "Support smooth transitions for the team" },
+            { "type": "D", "text": "Clarify expectations and move forward" },
+            { "type": "C", "text": "Review role boundaries and dependencies" }
         ]
     },
     {
         "qId": 7,
-        "question": "You have several high-priority tasks at the same time.",
+        "question": "When you are required to present progress to a new stakeholder group, you tend to:",
         "options": [
-            { "type": "D", "text": "I attack the toughest one first." },
-            { "type": "C", "text": "I analyze priorities and create a clear order." },
-            { "type": "S", "text": "I complete tasks in a steady sequence." },
-            { "type": "I", "text": "I involve the team to collaborate quickly." }
+            { "type": "C", "text": "Ensure all facts and details are correct" },
+            { "type": "D", "text": "Highlight key achievements and next steps" },
+            { "type": "S", "text": "Provide a structured and calm update" },
+            { "type": "I", "text": "Engage the group through explanation and dialogue" }
         ]
     },
     {
         "qId": 8,
-        "question": "A stakeholder is unhappy and very demanding.",
+        "question": "When ongoing work is disrupted by frequent ad-hoc requests, you usually:",
         "options": [
-            { "type": "C", "text": "I handle the issue with precise, factual information." },
-            { "type": "D", "text": "I address their concerns firmly and directly." },
-            { "type": "I", "text": "I use positive communication to calm them." },
-            { "type": "S", "text": "I stay patient and let them express concerns." }
+            { "type": "D", "text": "Re-prioritize actively to keep delivery on track" },
+            { "type": "S", "text": "Maintain steady progress despite disruptions" },
+            { "type": "I", "text": "Discuss priorities to reduce interruptions" },
+            { "type": "C", "text": "Evaluate impact before responding to requests" }
         ]
     },
     {
         "qId": 9,
-        "question": "You are suddenly asked to join an urgent meeting.",
+        "question": "When you notice declining engagement within the team, you typically:",
         "options": [
-            { "type": "D", "text": "I join immediately and take the lead if needed." },
-            { "type": "I", "text": "I engage actively to contribute ideas." },
-            { "type": "C", "text": "I ask for context to be fully prepared." },
-            { "type": "S", "text": "I join calmly and listen first." }
+            { "type": "C", "text": "Review workload and contributing factors" },
+            { "type": "I", "text": "Check in with individuals to understand concerns" },
+            { "type": "S", "text": "Provide consistency and reassurance" },
+            { "type": "D", "text": "Set clearer goals to re-focus effort" }
         ]
     },
     {
         "qId": 10,
-        "question": "A project requires you to stay longer than planned.",
+        "question": "When you are asked to take responsibility for an area with limited historical data, you usually:",
         "options": [
-            { "type": "S", "text": "I stay steady and help others manage the load." },
-            { "type": "D", "text": "I complete the work quickly so I can finish sooner." },
-            { "type": "C", "text": "I take time to ensure everything is correct." },
-            { "type": "I", "text": "I encourage the team to stay motivated together." }
+            { "type": "S", "text": "Proceed cautiously while maintaining stability" },
+            { "type": "D", "text": "Act quickly and learn through execution" },
+            { "type": "C", "text": "Analyze available information before acting" },
+            { "type": "I", "text": "Align expectations through discussion" }
         ]
     },
     {
         "qId": 11,
-        "question": "A mistake you made is noticed during a meeting.",
+        "question": "When different stakeholders measure success differently, you tend to:",
         "options": [
-            { "type": "D", "text": "I correct it immediately and move on." },
-            { "type": "I", "text": "I acknowledge it lightly and keep the flow positive." },
-            { "type": "S", "text": "I apologize calmly and correct the mistake." },
-            { "type": "C", "text": "I check what caused the mistake to prevent repetition." }
+            { "type": "D", "text": "Define a clear success metric and proceed" },
+            { "type": "S", "text": "Balance expectations to maintain harmony" },
+            { "type": "I", "text": "Facilitate agreement on shared measures" },
+            { "type": "C", "text": "Compare measures against objectives" }
         ]
     },
     {
         "qId": 12,
-        "question": "Your team must immediately adopt a new tool.",
+        "question": "When a long-term initiative shows slow but steady progress, you usually:",
         "options": [
-            { "type": "C", "text": "I read the guidelines before using it." },
-            { "type": "D", "text": "I try it quickly and learn through action." },
-            { "type": "S", "text": "I adapt slowly to avoid mistakes." },
-            { "type": "I", "text": "I discuss it with teammates to understand together." }
+            { "type": "C", "text": "Track trends to validate progress" },
+            { "type": "D", "text": "Push for faster results" },
+            { "type": "S", "text": "Stay consistent and patient" },
+            { "type": "I", "text": "Encourage continued alignment and motivation" }
         ]
     },
     {
         "qId": 13,
-        "question": "A colleague blames you for something you didn’t do.",
+        "question": "When changes are introduced without sufficient notice, you typically:",
         "options": [
-            { "type": "S", "text": "I stay composed and talk privately to resolve it." },
-            { "type": "D", "text": "I firmly defend myself immediately." },
-            { "type": "C", "text": "I provide evidence to show the facts." },
-            { "type": "I", "text": "I clear the misunderstanding through calm communication." }
+            { "type": "I", "text": "Communicate actively to reduce confusion" },
+            { "type": "D", "text": "Adapt quickly and keep moving" },
+            { "type": "S", "text": "Maintain routines where possible" },
+            { "type": "C", "text": "Assess impact before making adjustments" }
         ]
     },
     {
         "qId": 14,
-        "question": "Your workplace is chaotic due to heavy workload.",
+        "question": "When a critical decision has potential downstream consequences, you usually:",
         "options": [
-            { "type": "I", "text": "I help others stay positive." },
-            { "type": "D", "text": "I push hard to control the situation." },
-            { "type": "C", "text": "I organize tasks to reduce chaos." },
-            { "type": "S", "text": "I maintain calm and steady work." }
+            { "type": "C", "text": "Evaluate risks and assumptions carefully" },
+            { "type": "I", "text": "Discuss implications with stakeholders" },
+            { "type": "D", "text": "Decide and take responsibility" },
+            { "type": "S", "text": "Maintain stability while evaluating outcomes" }
         ]
     },
     {
         "qId": 15,
-        "question": "Your manager keeps assigning tasks back-to-back.",
+        "question": "When knowledge transfer is required under time pressure, you tend to:",
         "options": [
-            { "type": "C", "text": "I plan tasks to maintain quality." },
-            { "type": "D", "text": "I handle them fast to stay ahead." },
-            { "type": "I", "text": "I talk with the manager to discuss expectations." },
-            { "type": "S", "text": "I stay patient and continue working." }
+            { "type": "I", "text": "Explain context and reasoning" },
+            { "type": "S", "text": "Ensure continuity during transition" },
+            { "type": "D", "text": "Focus on key actions and essentials" },
+            { "type": "C", "text": "Document information clearly" }
         ]
     },
     {
         "qId": 16,
-        "question": "A system breakdown halts the entire team’s work.",
+        "question": "When team performance improves unevenly across areas, you usually:",
         "options": [
-            { "type": "D", "text": "I act quickly to find a short-term workaround." },
-            { "type": "I", "text": "I keep the team calm with positive communication." },
-            { "type": "C", "text": "I check technical causes or contact IT with details." },
-            { "type": "S", "text": "I wait patiently and support others." }
+            { "type": "D", "text": "Address weaker areas directly" },
+            { "type": "C", "text": "Analyze metrics to understand variation" },
+            { "type": "S", "text": "Reinforce consistent practices" },
+            { "type": "I", "text": "Discuss performance patterns openly" }
         ]
     },
     {
         "qId": 17,
-        "question": "A disagreement occurs during a stressful moment.",
+        "question": "When you are asked to balance innovation with established processes, you typically:",
         "options": [
-            { "type": "C", "text": "I look at facts to settle the disagreement." },
-            { "type": "D", "text": "I assert my point and push for resolution." },
-            { "type": "S", "text": "I encourage everyone to slow down and listen." },
-            { "type": "I", "text": "I try to reduce tension through communication." }
+            { "type": "I", "text": "Build support through discussion" },
+            { "type": "C", "text": "Evaluate alignment with standards" },
+            { "type": "S", "text": "Introduce change gradually" },
+            { "type": "D", "text": "Push new ideas into action" }
         ]
     },
     {
         "qId": 18,
-        "question": "An audit team arrives without prior notice.",
+        "question": "When you receive feedback that execution is strong but documentation is weak, you usually:",
         "options": [
-            { "type": "C", "text": "I collect documents and verify everything carefully." },
-            { "type": "D", "text": "I take charge and coordinate responses." },
-            { "type": "S", "text": "I support the team and ensure they stay calm." },
-            { "type": "I", "text": "I communicate clearly with auditors to maintain rapport." }
+            { "type": "S", "text": "Integrate documentation into regular workflow" },
+            { "type": "D", "text": "Improve documentation quickly" },
+            { "type": "C", "text": "Review documentation standards" },
+            { "type": "I", "text": "Clarify expectations around documentation" }
         ]
     },
     {
         "qId": 19,
-        "question": "Several tasks become urgent at the same time.",
+        "question": "When external conditions change suddenly and impact your plans, you tend to:",
         "options": [
-            { "type": "I", "text": "I gather the team and energize them." },
-            { "type": "D", "text": "I take fast action to regain control." },
-            { "type": "C", "text": "I plan the correct order of tasks." },
-            { "type": "S", "text": "I ensure we move together without panic." }
+            { "type": "C", "text": "Reassess assumptions and risks" },
+            { "type": "I", "text": "Communicate changes clearly" },
+            { "type": "S", "text": "Maintain steady execution where possible" },
+            { "type": "D", "text": "Adjust direction and move forward" }
         ]
     },
     {
         "qId": 20,
-        "question": "You face repetitive issues throughout a long day.",
+        "question": "When reflecting on how you handle complex work situations overall, you typically value most:",
         "options": [
-            { "type": "C", "text": "I find the root cause to avoid repetition." },
-            { "type": "D", "text": "I push through quickly to finish the day strong." },
-            { "type": "S", "text": "I remain patient and consistent." },
-            { "type": "I", "text": "I stay positive and keep everyone cheerful." }
+            { "type": "S", "text": "Providing reliability and stability" },
+            { "type": "D", "text": "Achieving outcomes efficiently" },
+            { "type": "I", "text": "Building alignment and understanding" },
+            { "type": "C", "text": "Maintaining quality and accuracy" }
         ]
     },
     {
         "qId": 21,
-        "question": "You are presenting to a client and the software suddenly stops working.",
+        "question": "When a senior leader asks you to justify a decision that was already executed, you usually respond by:",
         "options": [
-            { "type": "S", "text": "I stay calm and request support quietly." },
-            { "type": "D", "text": "I quickly switch to a backup plan and continue." },
-            { "type": "C", "text": "I troubleshoot the issue step-by-step." },
-            { "type": "I", "text": "I keep the client engaged while the issue is fixed." }
+            { "type": "D", "text": "Reinforcing the outcome and moving forward" },
+            { "type": "S", "text": "Responding calmly while maintaining stability" },
+            { "type": "I", "text": "Ensuring shared understanding through discussion" },
+            { "type": "C", "text": "Explaining the decision with data and rationale" }
         ]
     },
     {
         "qId": 22,
-        "question": "You discover an error in a report right before submission.",
+        "question": "When you are assigned to stabilize an initiative that has seen frequent changes, you typically:",
         "options": [
-            { "type": "D", "text": "I fix it immediately and submit." },
-            { "type": "I", "text": "I inform the team calmly and keep the energy steady." },
-            { "type": "S", "text": "I correct it and reassure the team." },
-            { "type": "C", "text": "I check the entire report thoroughly for more errors." }
+            { "type": "D", "text": "Clarify priorities and push progress" },
+            { "type": "S", "text": "Re-establish consistent execution routines" },
+            { "type": "C", "text": "Review what changes are essential" },
+            { "type": "I", "text": "Communicate direction clearly to stakeholders" }
         ]
     },
     {
         "qId": 23,
-        "question": "You notice a data mismatch that impacts calculations.",
+        "question": "When delivery requires balancing multiple small improvements rather than one major change, you tend to:",
         "options": [
-            { "type": "I", "text": "I discuss it with colleagues to get clarity." },
-            { "type": "D", "text": "I take fast action to correct the mismatch." },
-            { "type": "S", "text": "I inform the relevant team calmly." },
-            { "type": "C", "text": "I trace the error back to its source." }
+            { "type": "I", "text": "Discuss priorities to align expectations" },
+            { "type": "S", "text": "Implement improvements gradually" },
+            { "type": "D", "text": "Prioritize improvements that move results faster" },
+            { "type": "C", "text": "Evaluate impact before implementing" }
         ]
     },
     {
         "qId": 24,
-        "question": "A customer reports a recurring issue with the product.",
+        "question": "When leadership requests a forward-looking view with limited historical data, you usually:",
         "options": [
-            { "type": "S", "text": "I listen patiently to understand the full issue." },
-            { "type": "D", "text": "I give them a quick resolution plan." },
-            { "type": "I", "text": "I reassure them and maintain rapport." },
-            { "type": "C", "text": "I analyze logs and details before responding." }
+            { "type": "S", "text": "Maintain current execution while planning" },
+            { "type": "D", "text": "Make assumptions and proceed" },
+            { "type": "I", "text": "Discuss scenarios with stakeholders" },
+            { "type": "C", "text": "Assess risks and constraints carefully" }
         ]
     },
     {
         "qId": 25,
-        "question": "You face a complicated problem with no straightforward answer.",
+        "question": "When accountability for a cross-team outcome is unclear but delivery is expected, you typically:",
         "options": [
-            { "type": "C", "text": "I break the problem into smaller parts and analyze each one." },
-            { "type": "D", "text": "I choose a direction and take action." },
-            { "type": "S", "text": "I gather everyone’s perspective first." },
-            { "type": "I", "text": "I brainstorm with the team for ideas." }
+            { "type": "C", "text": "Clarify accountability formally" },
+            { "type": "I", "text": "Align teams through conversation" },
+            { "type": "S", "text": "Support execution until clarity emerges" },
+            { "type": "D", "text": "Take ownership to ensure delivery" }
         ]
     },
     {
         "qId": 26,
-        "question": "Right before a rollout, testers report major bugs.",
+        "question": "When a trusted process is questioned during a review, you usually:",
         "options": [
-            { "type": "C", "text": "I analyze each bug carefully to prevent future issues." },
-            { "type": "D", "text": "I drive the team to fix them fast." },
-            { "type": "I", "text": "I encourage collaboration to solve them quickly." },
-            { "type": "S", "text": "I help the team stay calm under pressure." }
+            { "type": "C", "text": "Validate the process against standards" },
+            { "type": "S", "text": "Maintain consistency while reviewing feedback" },
+            { "type": "D", "text": "Defend the process and proceed" },
+            { "type": "I", "text": "Explain the reasoning and benefits" }
         ]
     },
     {
         "qId": 27,
-        "question": "You notice a potential risk in the project timeline.",
+        "question": "When you are asked to lead an initiative outside your functional expertise, you tend to:",
         "options": [
-            { "type": "S", "text": "I support the team so we adjust smoothly." },
-            { "type": "D", "text": "I make a quick adjustment to reduce risk." },
-            { "type": "C", "text": "I document and evaluate the risk in detail." },
-            { "type": "I", "text": "I discuss it openly with the team." }
+            { "type": "S", "text": "Proceed cautiously while maintaining stability" },
+            { "type": "D", "text": "Step in and learn through execution" },
+            { "type": "C", "text": "Study requirements before acting" },
+            { "type": "I", "text": "Engage experts through discussion" }
         ]
     },
     {
         "qId": 28,
-        "question": "A problem keeps happening in your team’s workflow.",
+        "question": "When work quality is acceptable but not meeting expected standards, you usually:",
         "options": [
-            { "type": "D", "text": "I change the method and push for a new approach." },
-            { "type": "I", "text": "I encourage a group discussion for ideas." },
-            { "type": "S", "text": "I help the team maintain stability while improving." },
-            { "type": "C", "text": "I identify the root cause and fix the process." }
+            { "type": "I", "text": "Discuss gaps to build understanding" },
+            { "type": "C", "text": "Identify and address specific deviations" },
+            { "type": "S", "text": "Improve quality incrementally" },
+            { "type": "D", "text": "Raise expectations and push improvement" }
         ]
     },
     {
         "qId": 29,
-        "question": "During a customer training session, participants seem confused.",
+        "question": "When different versions of information circulate within the team, you typically:",
         "options": [
-            { "type": "D", "text": "I quickly change the method and explain differently." },
-            { "type": "I", "text": "I interact more to make it engaging and clear." },
-            { "type": "C", "text": "I provide structured examples and clear steps." },
-            { "type": "S", "text": "I slow down and clarify slowly." }
+            { "type": "C", "text": "Verify accuracy before finalizing" },
+            { "type": "D", "text": "Decide which version to use and proceed" },
+            { "type": "S", "text": "Continue execution while clarity improves" },
+            { "type": "I", "text": "Align everyone on a common version" }
         ]
     },
     {
         "qId": 30,
-        "question": "You realize an important detail was missed in your work.",
+        "question": "When timelines slip slightly but outcomes remain achievable, you tend to:",
         "options": [
-            { "type": "D", "text": "I fix it and move fast." },
-            { "type": "C", "text": "I review the entire work for additional gaps." },
-            { "type": "I", "text": "I discuss it with others to avoid similar gaps." },
-            { "type": "S", "text": "I calmly correct the mistake." }
+            { "type": "I", "text": "Communicate revised expectations" },
+            { "type": "S", "text": "Maintain steady execution" },
+            { "type": "D", "text": "Re-focus effort to regain momentum" },
+            { "type": "C", "text": "Assess downstream impact" }
         ]
     },
     {
         "qId": 31,
-        "question": "Multiple solutions are available for a problem.",
+        "question": "When you notice inefficiencies in a long-running process, you usually:",
         "options": [
-            { "type": "I", "text": "I gather input to find the best collaborative solution." },
-            { "type": "D", "text": "I choose the fastest and most effective option." },
-            { "type": "C", "text": "I compare data and pick the most accurate option." },
-            { "type": "S", "text": "I choose the solution that creates stability." }
+            { "type": "I", "text": "Discuss ideas to gain buy-in" },
+            { "type": "D", "text": "Push for immediate improvements" },
+            { "type": "C", "text": "Analyze the process to identify root causes" },
+            { "type": "S", "text": "Improve the process gradually" }
         ]
     },
     {
         "qId": 32,
-        "question": "A customer does not understand a technical feature.",
+        "question": "When a stakeholder challenges the value of a deliverable late in the cycle, you typically:",
         "options": [
-            { "type": "C", "text": "I provide a detailed explanation with examples." },
-            { "type": "D", "text": "I simplify and explain it quickly." },
-            { "type": "S", "text": "I patiently walk them through it." },
-            { "type": "I", "text": "I use clear communication to make them comfortable." }
+            { "type": "C", "text": "Support the value with data and evidence" },
+            { "type": "S", "text": "Maintain composure and continue execution" },
+            { "type": "D", "text": "Reinforce the purpose and move forward" },
+            { "type": "I", "text": "Explain the value through discussion" }
         ]
     },
     {
         "qId": 33,
-        "question": "A plan you built did not work as expected.",
+        "question": "When learning needs arise alongside ongoing delivery pressure, you usually:",
         "options": [
-            { "type": "C", "text": "I analyze why the plan failed before creating a new one." },
-            { "type": "D", "text": "I immediately create a new plan." },
-            { "type": "I", "text": "I involve the team to rethink the approach." },
-            { "type": "S", "text": "I support the team emotionally and adjust slowly." }
+            { "type": "C", "text": "Study materials in depth" },
+            { "type": "D", "text": "Learn quickly while executing" },
+            { "type": "S", "text": "Spread learning over time" },
+            { "type": "I", "text": "Learn through interaction and guidance" }
         ]
     },
     {
         "qId": 34,
-        "question": "You receive instructions that are unclear.",
+        "question": "When project ownership transitions from one team to another, you tend to:",
         "options": [
-            { "type": "S", "text": "I wait for proper instructions." },
-            { "type": "D", "text": "I move ahead based on what I understand." },
-            { "type": "C", "text": "I request clarity before starting." },
-            { "type": "I", "text": "I talk to others to interpret the instructions." }
+            { "type": "I", "text": "Align expectations between teams" },
+            { "type": "D", "text": "Define next actions clearly" },
+            { "type": "C", "text": "Confirm completeness of handover" },
+            { "type": "S", "text": "Ensure continuity of work" }
         ]
     },
     {
         "qId": 35,
-        "question": "Your team is stuck on a complex assignment.",
+        "question": "When you are asked to evaluate a proposal with limited time, you usually:",
         "options": [
-            { "type": "C", "text": "I study the problem carefully and guide logically." },
-            { "type": "D", "text": "I take charge and divide the task into parts." },
-            { "type": "I", "text": "I inspire everyone to share ideas." },
-            { "type": "S", "text": "I help them patiently and step-by-step." }
+            { "type": "C", "text": "Assess risks and assumptions" },
+            { "type": "D", "text": "Decide quickly based on key factors" },
+            { "type": "S", "text": "Maintain current direction until reviewed" },
+            { "type": "I", "text": "Discuss the proposal to clarify intent" }
         ]
     },
     {
         "qId": 36,
-        "question": "A product suddenly stops working in production.",
+        "question": "When competing priorities create frequent interruptions, you typically:",
         "options": [
-            { "type": "D", "text": "I take immediate action to reduce impact." },
-            { "type": "I", "text": "I communicate updates to keep everyone calm." },
-            { "type": "S", "text": "I support the team handling the issue." },
-            { "type": "C", "text": "I analyze logs to identify the exact cause." }
+            { "type": "S", "text": "Manage interruptions calmly" },
+            { "type": "I", "text": "Communicate boundaries clearly" },
+            { "type": "C", "text": "Evaluate impact before responding" },
+            { "type": "D", "text": "Reassert priorities firmly" }
         ]
     },
     {
         "qId": 37,
-        "question": "Two teams send conflicting data reports.",
+        "question": "When feedback suggests good results but strained collaboration, you usually:",
         "options": [
-            { "type": "D", "text": "I choose one and move forward quickly." },
-            { "type": "I", "text": "I call both teams for a discussion." },
-            { "type": "C", "text": "I verify both reports to find which is correct." },
-            { "type": "S", "text": "I bring the two teams together calmly." }
+            { "type": "D", "text": "Focus on outcomes first" },
+            { "type": "I", "text": "Address collaboration through conversation" },
+            { "type": "S", "text": "Improve working rhythm gradually" },
+            { "type": "C", "text": "Analyze feedback patterns" }
         ]
     },
     {
         "qId": 38,
-        "question": "The team suggests different ways to solve a problem.",
+        "question": "When an initiative nears completion but small issues remain, you typically:",
         "options": [
-            { "type": "C", "text": "I evaluate each option logically." },
-            { "type": "D", "text": "I pick a direction and instruct the team." },
-            { "type": "I", "text": "I encourage everyone to align on one solution." },
-            { "type": "S", "text": "I look for the most comfortable solution for the team." }
+            { "type": "S", "text": "Resolve issues steadily" },
+            { "type": "D", "text": "Push to close remaining actions" },
+            { "type": "C", "text": "Ensure all standards are met" },
+            { "type": "I", "text": "Align stakeholders on closure" }
         ]
     },
     {
         "qId": 39,
-        "question": "You see a recurring issue that slows productivity.",
+        "question": "When a strategic decision must balance innovation with risk, you usually:",
         "options": [
-            { "type": "D", "text": "I change the process immediately." },
-            { "type": "I", "text": "I bring the team together to share ideas." },
-            { "type": "S", "text": "I suggest improvements slowly." },
-            { "type": "C", "text": "I create a detailed improvement plan." }
+            { "type": "I", "text": "Discuss implications broadly" },
+            { "type": "S", "text": "Maintain stability while evaluating" },
+            { "type": "D", "text": "Move ahead with the opportunity" },
+            { "type": "C", "text": "Weigh risks carefully before deciding" }
         ]
     },
     {
         "qId": 40,
-        "question": "You need to review final output before submission.",
+        "question": "When reflecting on how you consistently contribute in complex work environments, you most identify with:",
         "options": [
-            { "type": "D", "text": "I check the key points quickly and proceed." },
-            { "type": "I", "text": "I ask for someone’s feedback before sending." },
-            { "type": "C", "text": "I examine every detail carefully." },
-            { "type": "S", "text": "I review calmly without rushing." }
+            { "type": "C", "text": "Ensuring quality and discipline" },
+            { "type": "I", "text": "Building alignment and trust" },
+            { "type": "D", "text": "Driving results and progress" },
+            { "type": "S", "text": "Providing stability and reliability" }
         ]
     }
 

@@ -6,7 +6,7 @@ const Assessment = require('../models/Assessment.model');
 // @access  Public
 exports.startAssessment = async (req, res) => {
     try {
-        const { userId } = req.params;
+        const userId = req.user._id;
 
         // Delete any old incomplete assessments for this user
         // This ensures a fresh start when retaking the assessment
@@ -39,7 +39,7 @@ exports.startAssessment = async (req, res) => {
 // @route   POST /assessment/submit/:userId
 // @access  Public
 exports.submitAssessment = async (req, res) => {
-    const { userId } = req.params;
+    const userId = req.user._id;
     const { setId, answers } = req.body;
 
     try {
@@ -175,7 +175,7 @@ exports.submitAssessment = async (req, res) => {
 // @route   POST /assessment/save-progress/:userId
 // @access  Public
 exports.saveProgress = async (req, res) => {
-    const { userId } = req.params;
+    const userId = req.user._id;
     const { setId, answers } = req.body;
 
     try {
@@ -224,7 +224,8 @@ exports.saveProgress = async (req, res) => {
 // @route   GET /assessment/progress/:userId/:setId
 // @access  Public
 exports.getProgress = async (req, res) => {
-    const { userId, setId } = req.params;
+    const userId = req.user._id
+    const { setId } = req.params;
 
     try {
         // Find incomplete assessment
@@ -251,7 +252,7 @@ exports.getAssessmentResult = async (req, res) => {
     try {
         // Get latest completed assessment (has highestTrait)
         const assessment = await Assessment.findOne({
-            userId: req.params.userId,
+            userId: req.user._id,
             highestTrait: { $exists: true }
         }).sort({ createdAt: -1 });
 
@@ -270,7 +271,7 @@ exports.getAssessmentResult = async (req, res) => {
 // @access  Public
 exports.checkAssessmentStatus = async (req, res) => {
     try {
-        const { userId } = req.params;
+        const userId = req.user._id;
 
         // Check for completed assessment (has highestTrait)
         const assessment = await Assessment.findOne({

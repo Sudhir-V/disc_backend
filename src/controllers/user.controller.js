@@ -5,7 +5,12 @@ const User = require('../models/User.model');
 // @access  Public
 exports.getUserProfile = async (req, res) => {
     try {
-        const user = await User.findById(req.params.userId);
+        // req.user is already set by authMiddleware
+        // We can optionally verify if req.params.userId matches req.user._id if we want to be strict about the URL
+        // But for security, we should return the logged-in user's profile.
+
+        const user = await User.findById(req.user._id);
+
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
