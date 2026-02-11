@@ -53,6 +53,8 @@ exports.retryOtp = async (req, res) => {
     }
 };
 
+const jwt = require('jsonwebtoken');
+
 // @desc    Verify OTP and Login
 // @route   POST /auth/verify-otp
 // @access  Public
@@ -65,6 +67,7 @@ exports.verifyOtp = async (req, res) => {
 
     try {
         const response = await msg91Service.verifyOtp(phone, otp);
+        console.log('Msg91 Response:', JSON.stringify(response, null, 2));
 
         if (response.type === 'success') {
             // OTP Verified - Find User
@@ -74,13 +77,22 @@ exports.verifyOtp = async (req, res) => {
                 return res.status(404).json({ message: 'User record not found.' });
             }
 
+            // Generate Token
+            const token = jwt.sign(
+                { id: user._id, isAdmin: user.isAdmin },
+                process.env.JWT_SECRET || 'fallback_secret_do_not_use_in_prod',
+                { expiresIn: '30d' }
+            );
+
             res.status(200).json({
                 message: 'Login successful',
                 user: {
                     _id: user._id,
                     phone: user.phone,
                     name: user.name,
+                    isAdmin: user.isAdmin,
                 },
+                token
             });
         } else {
             res.status(400).json({ message: 'Invalid OTP', details: response });

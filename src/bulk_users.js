@@ -20,8 +20,23 @@ connectDB();
 // ];
 
 const users = [
-    { name: "Suriya", email: "suriya@wele.in", phone: "9994594871", gender: "Male", isAdmin: true },
-    { name: "Praburaju S", email: "prabu@wele.in", phone: "9940255655", gender: "Male", isAdmin: true },
+    { name: "Manikandan G", email: "manikandan.g@wele.in", phone: "9942306822", gender: "Male" },
+    { name: "Ashwinth Kumar K", email: "ashwinthkumar.k@wele.in", phone: "6374233123", gender: "Male" },
+    { name: "Ajay M", email: "ajay.m@wele.in", phone: "7397594904", gender: "Male" },
+    { name: "Jalaldhalip M", email: "jalaldhalip.m@wele.in", phone: "8248769237", gender: "Male" },
+    { name: "Krishnakanth", email: "krishnakanth.s@wele.in", phone: "9150131154", gender: "Male" },
+    { name: "Kaviyarasan K", email: "kaviyarasan.k@wele.in", phone: "9786651033", gender: "Male" },
+    { name: "Bharani Kumar C", email: "bharanikumar.c@wele.in", phone: "6384797251", gender: "Male" },
+    { name: "Karthik P", email: "karthik.p@wele.in", phone: "7695815728", gender: "Male" },
+    { name: "MS Mathiazhagan", email: "mathiazhagan.ms@wele.in", phone: "9943431297", gender: "Male" },
+    { name: "Abinaya R", email: "abinaya@thepenindia.com", phone: "9042389978", gender: "Male" },
+    { name: "Vennila J", email: "vennila.j@wele.in", phone: "7010951378", gender: "Male" },
+    { name: "Vigneshwari S", email: "vigneshwari.s@wele.in", phone: "8838826374", gender: "Male" },
+    { name: "Sathish S", email: "sathish.s@wele.in", phone: "8825569339", gender: "Male" },
+    { name: "Abilash S", email: "abilash@wele.in", phone: "8778168747", gender: "Male" },
+    { name: "Praburaju S", email: "prabu@wele.in", phone: "9940255655", gender: "Male" },
+    { name: "Suriya", email: "suriya@wele.in", phone: "9994594871", gender: "Male" },
+    { name: "Ashika E", email: "ashika@wele.in", phone: "7010437818", gender: "Male" }
 ];
 
 // ==========================================================
