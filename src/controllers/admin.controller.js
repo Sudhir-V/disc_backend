@@ -25,6 +25,7 @@ exports.getAllUsersReport = async (req, res) => {
 
             return {
                 _id: user._id,
+                employeeId: user.employeeId || 'N/A', // Add employeeId
                 name: user.name || 'N/A',
                 email: user.email || 'N/A',
                 phone: user.phone,
@@ -91,6 +92,7 @@ exports.exportToXLSX = async (req, res) => {
             }
 
             return {
+                'Employee ID': user.employeeId || 'N/A', // First column
                 'Name': user.name || 'N/A',
                 'Email': user.email || 'N/A',
                 'Phone': user.phone,
@@ -115,6 +117,7 @@ exports.exportToXLSX = async (req, res) => {
 
         // Set column widths
         ws['!cols'] = [
+            { wch: 15 }, // Employee ID
             { wch: 20 }, // Name
             { wch: 30 }, // Email
             { wch: 15 }, // Phone
@@ -188,20 +191,21 @@ exports.exportToPDF = async (req, res) => {
 
         // Draw header
         doc.fontSize(8).font('Helvetica-Bold');
-        doc.text('Name', 30, currentY, { width: 80 });
-        doc.text('Email', 110, currentY, { width: 100 });
-        doc.text('Phone', 210, currentY, { width: 70 });
-        doc.text('Status', 280, currentY, { width: 50 });
-        doc.text('D', 330, currentY, { width: 50 });
-        doc.text('I', 380, currentY, { width: 50 });
-        doc.text('S', 430, currentY, { width: 50 });
-        doc.text('C', 480, currentY, { width: 50 });
-        doc.text('Trait', 530, currentY, { width: 60 });
-        doc.text('Time', 600, currentY, { width: 40 });
-        doc.text('Completed', 650, currentY, { width: 80 });
+        doc.text('Emp ID', 20, currentY, { width: 50 }); // Add Emp ID
+        doc.text('Name', 70, currentY, { width: 80 });
+        doc.text('Email', 150, currentY, { width: 100 });
+        doc.text('Phone', 250, currentY, { width: 70 });
+        doc.text('Status', 320, currentY, { width: 50 });
+        doc.text('D', 370, currentY, { width: 50 });
+        doc.text('I', 420, currentY, { width: 50 });
+        doc.text('S', 470, currentY, { width: 50 });
+        doc.text('C', 520, currentY, { width: 50 });
+        doc.text('Trait', 570, currentY, { width: 60 });
+        doc.text('Time', 640, currentY, { width: 40 });
+        doc.text('Completed', 690, currentY, { width: 80 });
 
         currentY += rowHeight;
-        doc.moveTo(30, currentY - 5).lineTo(800, currentY - 5).stroke();
+        doc.moveTo(20, currentY - 5).lineTo(800, currentY - 5).stroke();
 
         // Draw rows
         doc.font('Helvetica').fontSize(7);
@@ -230,24 +234,25 @@ exports.exportToPDF = async (req, res) => {
                 }
             }
 
-            doc.text(user.name || 'N/A', 30, currentY, { width: 80, ellipsis: true });
-            doc.text(user.email || 'N/A', 110, currentY, { width: 100, ellipsis: true });
-            doc.text(user.phone, 210, currentY, { width: 70 });
-            doc.text(assessment ? 'Completed' : 'Pending', 280, currentY, { width: 50 });
-            doc.text(dScore, 330, currentY, { width: 50 });
-            doc.text(iScore, 380, currentY, { width: 50 });
-            doc.text(sScore, 430, currentY, { width: 50 });
-            doc.text(cScore, 480, currentY, { width: 50 });
-            doc.text(trait, 530, currentY, { width: 60 });
+            doc.text(user.employeeId || 'N/A', 20, currentY, { width: 50, ellipsis: true }); // Add Emp ID
+            doc.text(user.name || 'N/A', 70, currentY, { width: 80, ellipsis: true });
+            doc.text(user.email || 'N/A', 150, currentY, { width: 100, ellipsis: true });
+            doc.text(user.phone, 250, currentY, { width: 70 });
+            doc.text(assessment ? 'Completed' : 'Pending', 320, currentY, { width: 50 });
+            doc.text(dScore, 370, currentY, { width: 50 });
+            doc.text(iScore, 420, currentY, { width: 50 });
+            doc.text(sScore, 470, currentY, { width: 50 });
+            doc.text(cScore, 520, currentY, { width: 50 });
+            doc.text(trait, 570, currentY, { width: 60 });
             doc.text(
                 assessment && assessment.timeTaken ? `${Math.floor(assessment.timeTaken / 60)}:${(assessment.timeTaken % 60).toString().padStart(2, '0')}` : '-',
-                600,
+                640,
                 currentY,
                 { width: 40 }
             );
             doc.text(
                 assessment ? new Date(assessment.createdAt).toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' }) : '-',
-                650,
+                690,
                 currentY,
                 { width: 80 }
             );
