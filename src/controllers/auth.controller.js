@@ -90,6 +90,7 @@ exports.verifyOtp = async (req, res) => {
                     _id: user._id,
                     phone: user.phone,
                     name: user.name,
+                    employeeId: user.employeeId || 'N/A', // Add employeeId
                     isAdmin: user.isAdmin,
                 },
                 token
