@@ -250,18 +250,27 @@ exports.getProgress = async (req, res) => {
 // @access  Public
 exports.getAssessmentResult = async (req, res) => {
     try {
+        const { userId } = req.params;
+
+        // Authorization check: Admin can see any report, users can only see their own
+        if (!req.user.isAdmin && req.user._id.toString() !== userId) {
+            return res.status(403).json({ message: 'Not authorized to view this report' });
+        }
+
         // Get latest completed assessment (has highestTrait)
         const assessment = await Assessment.findOne({
-            userId: req.user._id,
+            userId: userId,
             highestTrait: { $exists: true }
         }).sort({ createdAt: -1 });
 
         if (!assessment) {
+            console.log('Assessment not found for userId:', userId);
             return res.status(404).json({ message: 'Assessment not found' });
         }
 
         res.status(200).json(assessment);
     } catch (error) {
+        console.error('Error in getAssessmentResult:', error);
         res.status(500).json({ message: 'Server Error', error: error.message });
     }
 };
@@ -271,11 +280,11 @@ exports.getAssessmentResult = async (req, res) => {
 // @access  Public
 exports.checkAssessmentStatus = async (req, res) => {
     try {
-        const userId = req.user._id;
+        const { userId } = req.params;
 
         // Check for completed assessment (has highestTrait)
         const assessment = await Assessment.findOne({
-            userId,
+            userId: userId,
             highestTrait: { $exists: true }
         }).sort({ createdAt: -1 });
 
