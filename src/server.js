@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || (process.env.NODE_ENV === 'production' ? 10000 : 3945);
+const PORT = process.env.PORT || 10000;
 
 // Middleware
 app.use(cors());
