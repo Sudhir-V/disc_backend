@@ -5,11 +5,12 @@ const connectDB = require('./config/db');
 const path = require('path');
 const dotenv = require('dotenv');
 
-// Load .env file
+// Capture host-assigned PORT (e.g. from Render) before .env loads
+const hostPort = process.env.PORT;
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = hostPort || process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
