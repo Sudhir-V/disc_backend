@@ -1,9 +1,8 @@
-const mongoose = require('mongoose');
+const path = require('path');
 const dotenv = require('dotenv');
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const Questions = require('../src/models/Questions.model');
 const connectDB = require('../src/config/db');
-
-dotenv.config();
 
 // Helper to shuffle options array so trait order is randomized
 function shuffle(array) {

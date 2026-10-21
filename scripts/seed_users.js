@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-require('dotenv').config({ path: '.env' });
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 const User = require('../src/models/User.model');
 
 const usersToSeed = [
@@ -9,6 +10,14 @@ const usersToSeed = [
         phone: '9043104868',   // stored without +91 prefix
         email: 'thulasisiva97@gmail.com',
         employeeId: 'EMP001',
+        gender: 'Male',
+        isAdmin: true,
+    },
+    {
+        name: 'Sudhir',
+        phone: '9894511482',   // stored without +91 prefix
+        email: '4sudhirv@gmail.com',
+        employeeId: 'EMP047',
         gender: 'Male',
         isAdmin: true,
     }
