@@ -31,8 +31,18 @@ try {
   console.error('❌ Error loading admin routes:', error.message);
 }
 
+// Swagger API Documentation
+const { swaggerUi, swaggerDocument, swaggerUiOptions } = require('./config/swagger');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerUiOptions));
+app.get('/api-docs.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(swaggerDocument);
+});
+app.get('/swagger', (req, res) => res.redirect('/api-docs'));
+app.get('/docs', (req, res) => res.redirect('/api-docs'));
+
 app.get('/', (req, res) => {
-  res.send('DISC Assessment API is running...');
+  res.send('DISC Assessment API is running... API docs available at <a href="/api-docs">/api-docs</a>');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
